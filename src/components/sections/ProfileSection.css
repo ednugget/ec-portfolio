@@ -1,0 +1,77 @@
+.profile-section {
+  width: 100%;
+  max-width: 650px;
+}
+
+.profile-section__heading {
+  margin: 0 0 0.875rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #eeeeee;
+}
+
+.profile-section__caption {
+  margin: 0 0 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #7b7b7b;
+}
+
+.profile-section__summary {
+  margin: 0 0 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #eeeeee;
+}
+
+.profile-section__subtitle {
+  margin: 1.125rem 0 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #eeeeee;
+}
+
+.profile-section__list-heading {
+  margin: 0.875rem 0 0.125rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #d2d2d2;
+}
+
+.profile-section__copy {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #999999;
+}
+
+.profile-section__separator {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8333rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #999999;
+}
+
+.profile-section__link {
+  color: #999999;
+  text-decoration: none;
+}
+
+.profile-section__link:hover,
+.profile-section__link:focus-visible {
+  color: #eeeeee;
+}

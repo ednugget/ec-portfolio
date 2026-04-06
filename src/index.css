@@ -1,0 +1,66 @@
+/* Portfolio shell — forced dark canvas (Screen 1+) */
+html {
+  color-scheme: dark;
+  background: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+#root {
+  min-height: 100vh;
+  background: #1a1a1a;
+}
+
+.portfolio-shell {
+  --shell-max-width: 1280px;
+  min-height: 100vh;
+  position: relative;
+  background: #1a1a1a;
+  width: 100%;
+  max-width: var(--shell-max-width);
+  margin: 0 auto;
+}
+
+.content-pane {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem 2rem;
+  background: #1a1a1a;
+}
+
+@media (min-width: 640px) {
+  .content-pane {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-pane {
+    padding: 2.5rem 2rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-pane {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 5rem 3rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content-pane {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    padding: 5rem 4rem 3.5rem;
+  }
+}

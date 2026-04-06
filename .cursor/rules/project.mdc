@@ -1,0 +1,56 @@
+---
+alwaysApply: true
+---
+## Project Structure
+
+This is a Vite + React + TypeScript project. Follow these conventions at all times:
+
+### Layout
+Use standard responsive breakpoints and let layouts adapt to the viewport width.
+
+### Assets
+- All images go in /public/images/
+- All Lottie animation files go in /public/animations/
+- Reference images as src="/images/filename.jpg" — never import them into components
+- Reference Lottie files as src="/animations/filename.json"
+
+### Components
+- All components go in /src/components/
+- Each component gets its own file
+- Do not co-locate images or assets inside /src/components/
+
+### Styles
+- Global CSS variables and resets live in /src/globals.css
+- No Tailwind, no CSS-in-JS, no UI libraries — plain CSS only
+
+### Design System
+- Background: #1a1a1a
+- Menu title: #cccccc
+- Menu items default: #7b7b7b
+- Menu items hover: #eeeeee
+
+- Section headings: #eeeeee
+- Caption: #7b7b7b
+- Summary: #eeeeee
+- Subtitles: #d2d2d2
+- ListHeadings: #d2d2d2
+- Body copy: #999999
+
+Set font-family to 'Inter', sans-serif.
+Use font-weight: 500 for medium text and font-weight: 700 for bold text.
+
+- Menu items: font-weight: 700
+- Section headings: font-weight: 500
+- Caption: font-weight: 500
+- Summary: font-weight: 500
+- Subtitles:font-weight: 500
+- ListHeadings: font-weight: 500
+- Body copy: font-weight: 500
+
+For menu icons made of three lines 1 px #2a2a2a, on hover only change the color of the middle line to #eeeeee, not the entire icon.
+Keep the other two lines unchanged.
+Use the existing SVG paths or separate elements so only the targeted line is styled on hover.
+
+### Dependencies
+- Lottie player: @lottiefiles/react-lottie-player
+- No other UI or animation libraries unless explicitly asked
