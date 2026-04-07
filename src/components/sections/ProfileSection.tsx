@@ -90,6 +90,17 @@ export function ProfileSection() {
           Email
         </a>
       </p>
+      <p className="profile-section__test">
+        Vibecoded in Cursor. Uicons by{' '}
+        <a
+          className="profile-section__test-link"
+          href="https://www.flaticon.com/uicons"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Flaticon
+        </a>
+      </p>
     </section>
   )
 }

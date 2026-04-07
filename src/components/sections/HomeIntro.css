@@ -39,11 +39,29 @@
   height: auto;
   max-height: min(52vh, 480px);
   object-fit: contain;
-  transition: transform 200ms ease;
+  will-change: transform;
 }
 
 .home-intro__illustration-img:hover {
-  transform: rotate(-15deg);
+  animation: home-intro-float-tilt 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes home-intro-float-tilt {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(-75%, -55%) rotate(-12deg);
+  }
+
+  66% {
+    transform: translate(-75%, 35%) rotate(9deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 @media (min-width: 768px) {

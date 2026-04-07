@@ -149,7 +149,7 @@ export function OperationsInfrastructure() {
         <li className="operations-infra__icon-list-item">
           <i className="fi fi-tr-crystal-ball" aria-hidden />
           <span>
-            The network status became visible in the new dashboard giving
+            The network status became visible in the new dashboard, giving
             operators a chance to anticipate and mitigate disruptions
           </span>
         </li>

@@ -75,3 +75,21 @@
 .profile-section__link:focus-visible {
   color: #eeeeee;
 }
+
+.profile-section__test {
+  margin: 0.75rem 0 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.667rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #4c4c4c;
+}
+
+.profile-section__test-link {
+  color: #4c4c4c;
+}
+
+.profile-section__test-link:hover,
+.profile-section__test-link:focus-visible {
+  color: #eeeeee;
+}
