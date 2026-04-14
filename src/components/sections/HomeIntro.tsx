@@ -1,6 +1,25 @@
 import './HomeIntro.css'
+import { useState } from 'react'
 
 export function HomeIntro() {
+  const [isHoveringIllustration, setIsHoveringIllustration] = useState(false)
+  const [isDrifting, setIsDrifting] = useState(false)
+
+  const handleIllustrationEnter = () => {
+    setIsHoveringIllustration(true)
+    setIsDrifting(true)
+  }
+
+  const handleIllustrationLeave = () => {
+    setIsHoveringIllustration(false)
+  }
+
+  const handleAnimationIteration = () => {
+    if (!isHoveringIllustration) {
+      setIsDrifting(false)
+    }
+  }
+
   return (
     <section className="home-intro" aria-labelledby="home-intro-heading">
       <h1 id="home-intro-heading" className="home-intro__heading">
@@ -13,12 +32,15 @@ export function HomeIntro() {
       </p>
       <div className="home-intro__illustration">
         <img
-          className="home-intro__illustration-img"
+          className={`home-intro__illustration-img${isDrifting ? ' is-drifting' : ''}`}
           src="/images/icosaedro.svg"
           alt=""
           width={520}
           height={520}
           decoding="async"
+          onMouseEnter={handleIllustrationEnter}
+          onMouseLeave={handleIllustrationLeave}
+          onAnimationIteration={handleAnimationIteration}
         />
       </div>
     </section>
