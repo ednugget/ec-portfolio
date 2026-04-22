@@ -5,17 +5,25 @@ import { OperationsInfrastructure } from './components/sections/OperationsInfras
 import { BookingsAccessControl } from './components/sections/BookingsAccessControl'
 import { RegulatoryReporting } from './components/sections/RegulatoryReporting'
 import { RevenueRecognition } from './components/sections/RevenueRecognition'
+import { MobileMoneyPayment } from './components/sections/MobileMoneyPayment'
 import { ProfileSection } from './components/sections/ProfileSection'
 
 const OPS_INFRA_LABEL = 'Operations & Infrastructure' as const
 const BOOKINGS_LABEL = 'Bookings & Access' as const
 const REG_REPORTING_LABEL = 'Regulatory Reporting' as const
 const REVENUE_LABEL = 'Revenue Recognition' as const
+const MOBILE_MONEY_LABEL = 'Mobile Money Payments' as const
 const PROFILE_LABEL = 'Profile' as const
 
 function App() {
   const [activeScreen, setActiveScreen] = useState<
-    'home' | 'operations' | 'bookings' | 'regulatory' | 'revenue' | 'profile'
+    | 'home'
+    | 'operations'
+    | 'bookings'
+    | 'regulatory'
+    | 'revenue'
+    | 'mobileMoney'
+    | 'profile'
   >('home')
 
   const handleSelectItem = (
@@ -24,6 +32,7 @@ function App() {
       | typeof BOOKINGS_LABEL
       | typeof REG_REPORTING_LABEL
       | typeof REVENUE_LABEL
+      | typeof MOBILE_MONEY_LABEL
       | typeof PROFILE_LABEL
       | string,
   ) => {
@@ -47,6 +56,11 @@ function App() {
       return
     }
 
+    if (item === MOBILE_MONEY_LABEL) {
+      setActiveScreen('mobileMoney')
+      return
+    }
+
     if (item === PROFILE_LABEL) {
       setActiveScreen('profile')
     }
@@ -61,9 +75,11 @@ function App() {
           ? REG_REPORTING_LABEL
           : activeScreen === 'revenue'
             ? REVENUE_LABEL
-            : activeScreen === 'profile'
-              ? PROFILE_LABEL
-        : null
+            : activeScreen === 'mobileMoney'
+              ? MOBILE_MONEY_LABEL
+              : activeScreen === 'profile'
+                ? PROFILE_LABEL
+                : null
 
   return (
     <div className="portfolio-shell">
@@ -81,6 +97,8 @@ function App() {
           <RegulatoryReporting />
         ) : activeScreen === 'revenue' ? (
           <RevenueRecognition />
+        ) : activeScreen === 'mobileMoney' ? (
+          <MobileMoneyPayment />
         ) : activeScreen === 'profile' ? (
           <ProfileSection />
         ) : (

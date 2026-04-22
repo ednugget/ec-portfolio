@@ -5,6 +5,7 @@ const ITEMS = [
   'Bookings & Access',
   'Regulatory Reporting',
   'Revenue Recognition',
+  'Mobile Money Payments',
   'Profile',
 ] as const
 

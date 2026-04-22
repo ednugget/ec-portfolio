@@ -24,6 +24,12 @@
   max-width: 650px;
 }
 
+.home-intro__body--lead {
+  margin-bottom: 1rem;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
 .home-intro__illustration {
   width: 100%;
   max-width: 100%;
