@@ -10,22 +10,20 @@ export function ProfileSection() {
       <p className="profile-section__caption">Design is the constant</p>
 
       <p className="profile-section__summary">
-        I have held lots of roles and held lots of hats in smaller teams,
-        partnering with cross-functional stakeholders and engineers to turn
-        complex requirements into shippable solutions. My most developed skill
-        is intuition. I understand the technical implications of a design and
-        can balance process with real world constrains. I adapt to fit each
-        team and the business needs.
+        I have held lots of hats in many teams, partnering with cross-functional
+        stakeholders and engineers to turn complex requirements into shippable
+        solutions. My most developed skill is intuition. I understand the
+        technical implications of a design and can balance process with real
+        world constrains.
         <br />
         <br />
-        I have a Graphic Design background, and I love drawing icons and adding
-        motion and doing illustrations where possible. I tend to bring humour
-        into the process. My colleagues refer to what I do as "edna's magic".
+        I tend to bring humour into the process and try to keep a beginner
+        mindset - constantly learning new tricks (currently that's vibe
+        coding). My colleagues refer to what I do as "edna's magic".
         <br />
         <br />
-        I try to keep a beginner mindset and constantly sign up to learn new
-        things. Currently learning vibe coding with
-        Figma+Cursor+Supabase+Github+Netlify
+        Outside work, I like gymming, rock climbing, cooking, reading and
+        doing art. My holidays are generally spent playing in the mountains.
       </p>
 
       <h2 className="profile-section__subtitle">Timeline</h2>
@@ -60,26 +58,44 @@ export function ProfileSection() {
       <p className="profile-section__copy">UI Redesign | Contract</p>
 
       <h2 className="profile-section__subtitle">Get in touch</h2>
-      <p className="profile-section__copy">
-        <a
-          className="profile-section__link"
-          href="https://www.linkedin.com/in/ednacalvo/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Linked in
-        </a>
-      </p>
-      <p className="profile-section__copy">
-        <a
-          className="profile-section__link"
-          href="https://dribbble.com/ednugget"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Dribble
-        </a>
-      </p>
+      <ul className="profile-section__socials">
+        <li>
+          <a
+            className="profile-section__icon-link profile-section__icon-link--linkedin"
+            href="https://www.linkedin.com/in/ednacalvo/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          />
+        </li>
+        <li>
+          <a
+            className="profile-section__icon-link profile-section__icon-link--dribbble"
+            href="https://dribbble.com/ednugget"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Dribbble"
+          />
+        </li>
+        <li>
+          <a
+            className="profile-section__icon-link profile-section__icon-link--instagram"
+            href="https://www.instagram.com/ednlightened?igsh=ZTl2MWZybG9sczc3&utm_source=qr"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          />
+        </li>
+        <li>
+          <a
+            className="profile-section__icon-link profile-section__icon-link--goodreads"
+            href="https://www.goodreads.com/user/show/7760648"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Goodreads"
+          />
+        </li>
+      </ul>
       <p className="profile-section__copy">
         <a
           className="profile-section__link"

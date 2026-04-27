@@ -76,6 +76,54 @@
   color: #eeeeee;
 }
 
+.profile-section__socials {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-section__icon-link {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #999999;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  transition: background-color 200ms ease;
+}
+
+.profile-section__icon-link:hover,
+.profile-section__icon-link:focus-visible {
+  background-color: #f2f2f2;
+}
+
+.profile-section__icon-link--linkedin {
+  -webkit-mask-image: url('/images/linkedin.svg');
+          mask-image: url('/images/linkedin.svg');
+}
+
+.profile-section__icon-link--dribbble {
+  -webkit-mask-image: url('/images/dribbble.svg');
+          mask-image: url('/images/dribbble.svg');
+}
+
+.profile-section__icon-link--instagram {
+  -webkit-mask-image: url('/images/instagram.svg');
+          mask-image: url('/images/instagram.svg');
+}
+
+.profile-section__icon-link--goodreads {
+  -webkit-mask-image: url('/images/goodreads.svg');
+          mask-image: url('/images/goodreads.svg');
+}
+
 .profile-section__test {
   margin: 0.75rem 0 0;
   font-family: 'Inter', sans-serif;

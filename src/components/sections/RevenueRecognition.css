@@ -67,6 +67,25 @@
   height: auto;
   border-radius: 0.5rem;
   border: 1px solid #3a3a3a;
+  transform-origin: center;
+  transition:
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.revenue-recognition__image:hover,
+.revenue-recognition__image:focus-visible {
+  border-color: #f2f2f2;
+  transform: rotate(-1deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revenue-recognition__image,
+  .revenue-recognition__image:hover,
+  .revenue-recognition__image:focus-visible {
+    transition: none;
+    transform: none;
+  }
 }
 
 .revenue-recognition__icon-list {
@@ -93,7 +112,7 @@
 
 .revenue-recognition__icon-list-item .fi {
   font-size: 0.9rem;
-  color: #999999;
+  color: #d2d2d2;
   line-height: 1;
   margin-top: 0.125rem;
   flex-shrink: 0;

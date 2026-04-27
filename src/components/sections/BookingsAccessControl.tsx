@@ -1,6 +1,33 @@
+import { useEffect, useState } from 'react'
 import './BookingsAccessControl.css'
 
+const HERO_FRAMES = [
+  '/images/Image3a.png',
+  '/images/Image3a2.png',
+  '/images/Image3a3.png',
+  '/images/Image3a4.png',
+  '/images/Image3a5.png',
+] as const
+
+const HERO_FRAME_INTERVAL_MS = 1000
+
 export function BookingsAccessControl() {
+  const [heroFrameIndex, setHeroFrameIndex] = useState(0)
+
+  useEffect(() => {
+    HERO_FRAMES.forEach((src) => {
+      const img = new Image()
+      img.src = src
+    })
+  }, [])
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setHeroFrameIndex((i) => (i + 1) % HERO_FRAMES.length)
+    }, HERO_FRAME_INTERVAL_MS)
+    return () => window.clearInterval(id)
+  }, [])
+
   return (
     <section className="bookings-access" aria-labelledby="bookings-access-heading">
       <h1 id="bookings-access-heading" className="bookings-access__heading">
@@ -81,10 +108,9 @@ export function BookingsAccessControl() {
 
       <figure className="bookings-access__figure">
         <img
-          src="/images/Image3a.png"
+          src={HERO_FRAMES[heroFrameIndex]}
           alt="Bookings and access mobile screen"
           className="bookings-access__image"
-          loading="lazy"
           decoding="async"
         />
       </figure>
