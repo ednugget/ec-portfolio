@@ -66,25 +66,18 @@
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
-  border: 1px solid #3a3a3a;
-  transform-origin: center;
-  transition:
-    border-color 250ms ease,
-    transform 250ms ease;
+  border: 1px solid #2a2a2a;
+  transition: border-color 250ms ease;
 }
 
 .mobile-money__image:hover,
 .mobile-money__image:focus-visible {
-  border-color: #f2f2f2;
-  transform: rotate(-1deg);
+  border-color: #7b7b7b;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .mobile-money__image,
-  .mobile-money__image:hover,
-  .mobile-money__image:focus-visible {
+  .mobile-money__image {
     transition: none;
-    transform: none;
   }
 }
 
