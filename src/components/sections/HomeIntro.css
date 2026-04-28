@@ -30,17 +30,131 @@
   line-height: 1.2;
 }
 
-.home-intro__video-wrap {
-  margin-top: 2rem;
-  width: 100%;
+.home-intro__body--muted {
+  color: #7b7b7b;
 }
 
-.home-intro__video {
+.home-intro__cards {
+  position: relative;
+  width: 650px;
+  max-width: 100%;
+  height: 320px;
+  margin: 2rem auto 0;
+  overflow: visible;
+}
+
+.home-intro__card {
+  --tx: 0px;
+  --ty: 0px;
+  --rot: 0deg;
+  --hover-lift: 0px;
+  --hover-shift: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
   display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 9px;
-  border: 1px solid #4c4c4c;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transform-origin: bottom center;
+  transform: translateX(calc(-50% + var(--tx) + var(--hover-shift)))
+    translateY(calc(var(--ty) + var(--hover-lift)))
+    rotate(var(--rot));
+  transition: transform 360ms cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+.home-intro__card:focus {
+  outline: none;
+}
+
+.home-intro__card:focus-visible .home-intro__card-img {
+  outline: 2px solid #f2f2f2;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.home-intro__card-img {
+  display: block;
+  height: 200px;
+  width: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.home-intro__card--c1 {
+  --tx: -170px;
+  --ty: 0px;
+  --rot: -30deg;
+  z-index: 1;
+}
+
+.home-intro__card--c2 {
+  --tx: -85px;
+  --ty: -35px;
+  --rot: -15deg;
+  z-index: 3;
+}
+
+.home-intro__card--c3 {
+  --tx: 0px;
+  --ty: -45px;
+  --rot: 0deg;
+  z-index: 5;
+}
+
+.home-intro__card--c4 {
+  --tx: 85px;
+  --ty: -35px;
+  --rot: 15deg;
+  z-index: 3;
+}
+
+.home-intro__card--c5 {
+  --tx: 170px;
+  --ty: 0px;
+  --rot: 30deg;
+  z-index: 1;
+}
+
+.home-intro__card:hover {
+  --hover-lift: -10px;
+  z-index: 10;
+}
+
+.home-intro__cards:has(.home-intro__card--c1:hover) .home-intro__card--c2,
+.home-intro__cards:has(.home-intro__card--c1:hover) .home-intro__card--c3,
+.home-intro__cards:has(.home-intro__card--c1:hover) .home-intro__card--c4,
+.home-intro__cards:has(.home-intro__card--c1:hover) .home-intro__card--c5,
+.home-intro__cards:has(.home-intro__card--c2:hover) .home-intro__card--c3,
+.home-intro__cards:has(.home-intro__card--c2:hover) .home-intro__card--c4,
+.home-intro__cards:has(.home-intro__card--c2:hover) .home-intro__card--c5,
+.home-intro__cards:has(.home-intro__card--c3:hover) .home-intro__card--c4,
+.home-intro__cards:has(.home-intro__card--c3:hover) .home-intro__card--c5,
+.home-intro__cards:has(.home-intro__card--c4:hover) .home-intro__card--c5 {
+  --hover-shift: 12px;
+}
+
+.home-intro__cards:has(.home-intro__card--c5:hover) .home-intro__card--c1,
+.home-intro__cards:has(.home-intro__card--c5:hover) .home-intro__card--c2,
+.home-intro__cards:has(.home-intro__card--c5:hover) .home-intro__card--c3,
+.home-intro__cards:has(.home-intro__card--c5:hover) .home-intro__card--c4,
+.home-intro__cards:has(.home-intro__card--c4:hover) .home-intro__card--c1,
+.home-intro__cards:has(.home-intro__card--c4:hover) .home-intro__card--c2,
+.home-intro__cards:has(.home-intro__card--c4:hover) .home-intro__card--c3,
+.home-intro__cards:has(.home-intro__card--c3:hover) .home-intro__card--c1,
+.home-intro__cards:has(.home-intro__card--c3:hover) .home-intro__card--c2,
+.home-intro__cards:has(.home-intro__card--c2:hover) .home-intro__card--c1 {
+  --hover-shift: -12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-intro__card {
+    transition: none;
+  }
 }
 
 @media (min-width: 768px) {

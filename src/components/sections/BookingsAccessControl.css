@@ -79,12 +79,40 @@
   transform: rotate(-1deg);
 }
 
+.bookings-access__figure--hero {
+  position: relative;
+}
+
+.bookings-access__figure--hero .bookings-access__image--hero {
+  opacity: 0;
+  transition: opacity 800ms ease-out;
+}
+
+.bookings-access__figure--hero .bookings-access__image--hero:not(:first-child) {
+  position: absolute;
+  inset: 0;
+}
+
+.bookings-access__figure--hero .bookings-access__image--hero.is-active {
+  opacity: 1;
+}
+
+.bookings-access__image--hero:hover,
+.bookings-access__image--hero:focus-visible {
+  transform: none;
+  border-color: #7b7b7b;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bookings-access__image,
   .bookings-access__image:hover,
   .bookings-access__image:focus-visible {
     transition: none;
     transform: none;
+  }
+
+  .bookings-access__figure--hero .bookings-access__image--hero {
+    transition: none;
   }
 }
 

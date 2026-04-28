@@ -102,7 +102,7 @@ function App() {
         ) : activeScreen === 'profile' ? (
           <ProfileSection />
         ) : (
-          <HomeIntro />
+          <HomeIntro onNavigate={setActiveScreen} />
         )}
       </main>
     </div>

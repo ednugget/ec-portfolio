@@ -9,7 +9,7 @@ const HERO_FRAMES = [
   '/images/Image3a5.png',
 ] as const
 
-const HERO_FRAME_INTERVAL_MS = 1000
+const HERO_FRAME_INTERVAL_MS = 2000
 
 export function BookingsAccessControl() {
   const [heroFrameIndex, setHeroFrameIndex] = useState(0)
@@ -106,13 +106,19 @@ export function BookingsAccessControl() {
         _Sign off QA cycle
       </p>
 
-      <figure className="bookings-access__figure">
-        <img
-          src={HERO_FRAMES[heroFrameIndex]}
-          alt="Bookings and access mobile screen"
-          className="bookings-access__image"
-          decoding="async"
-        />
+      <figure className="bookings-access__figure bookings-access__figure--hero">
+        {HERO_FRAMES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={i === 0 ? 'Bookings and access mobile screen' : ''}
+            aria-hidden={i === 0 ? undefined : true}
+            className={`bookings-access__image bookings-access__image--hero${
+              i === heroFrameIndex ? ' is-active' : ''
+            }`}
+            decoding="async"
+          />
+        ))}
       </figure>
 
       <h2 className="bookings-access__subtitle">Design objectives</h2>
