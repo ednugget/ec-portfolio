@@ -79,10 +79,14 @@
 
 .home-intro__card-img {
   display: block;
-  height: 200px;
-  width: auto;
   pointer-events: none;
   user-select: none;
+}
+
+.home-intro__card-img svg {
+  display: block;
+  height: 200px;
+  width: auto;
 }
 
 .home-intro__card--c1 {

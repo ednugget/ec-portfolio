@@ -100,6 +100,10 @@
 .bookings-access__image--hero:hover,
 .bookings-access__image--hero:focus-visible {
   transform: none;
+}
+
+.bookings-access__figure--hero:hover .bookings-access__image--hero.is-active,
+.bookings-access__figure--hero:focus-within .bookings-access__image--hero.is-active {
   border-color: #7b7b7b;
 }
 

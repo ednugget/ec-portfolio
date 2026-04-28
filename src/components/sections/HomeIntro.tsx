@@ -1,4 +1,9 @@
 import './HomeIntro.css'
+import card1Svg from '../../assets/cards/Card1.svg?raw'
+import card2Svg from '../../assets/cards/Card2.svg?raw'
+import card3Svg from '../../assets/cards/Card3.svg?raw'
+import card4Svg from '../../assets/cards/Card4.svg?raw'
+import card5Svg from '../../assets/cards/Card5.svg?raw'
 
 export type HomeIntroTarget =
   | 'operations'
@@ -13,37 +18,37 @@ type HomeIntroProps = {
 
 const CARDS: Array<{
   modifier: string
-  src: string
+  svg: string
   label: string
   target: HomeIntroTarget
 }> = [
   {
     modifier: 'c1',
-    src: '/images/Card1.svg',
+    svg: card1Svg,
     label: 'Mobile Money Payments',
     target: 'mobileMoney',
   },
   {
     modifier: 'c2',
-    src: '/images/Card2.svg',
+    svg: card2Svg,
     label: 'Regulatory Reporting',
     target: 'regulatory',
   },
   {
     modifier: 'c3',
-    src: '/images/Card3.svg',
+    svg: card3Svg,
     label: 'Operations & Infrastructure',
     target: 'operations',
   },
   {
     modifier: 'c4',
-    src: '/images/Card4.svg',
+    svg: card4Svg,
     label: 'Bookings & Access',
     target: 'bookings',
   },
   {
     modifier: 'c5',
-    src: '/images/Card5.svg',
+    svg: card5Svg,
     label: 'Revenue Recognition',
     target: 'revenue',
   },
@@ -72,11 +77,10 @@ export function HomeIntro({ onNavigate }: HomeIntroProps) {
             onClick={() => onNavigate(card.target)}
             className={`home-intro__card home-intro__card--${card.modifier}`}
           >
-            <img
-              src={card.src}
-              alt=""
+            <span
               className="home-intro__card-img"
               aria-hidden="true"
+              dangerouslySetInnerHTML={{ __html: card.svg }}
             />
           </button>
         ))}
